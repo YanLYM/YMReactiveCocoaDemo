@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		504111E1223F374600DF3788 /* YMTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504111E0223F374600DF3788 /* YMTestView.m */; };
+		5064A0D12248763B0012FD36 /* YMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064A0D02248763B0012FD36 /* YMObject.m */; };
+		5064A0D52249FB630012FD36 /* CTMediator+YMModuleA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064A0D42249FB630012FD36 /* CTMediator+YMModuleA.m */; };
 		50CE9B8A223B8FE500C168DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE9B89223B8FE500C168DC /* AppDelegate.m */; };
 		50CE9B8D223B8FE500C168DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE9B8C223B8FE500C168DC /* ViewController.m */; };
 		50CE9B90223B8FE600C168DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CE9B8E223B8FE600C168DC /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		504111DF223F374600DF3788 /* YMTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMTestView.h; sourceTree = "<group>"; };
 		504111E0223F374600DF3788 /* YMTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMTestView.m; sourceTree = "<group>"; };
+		5064A0CF2248763B0012FD36 /* YMObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMObject.h; sourceTree = "<group>"; };
+		5064A0D02248763B0012FD36 /* YMObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMObject.m; sourceTree = "<group>"; };
+		5064A0D32249FB630012FD36 /* CTMediator+YMModuleA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+YMModuleA.h"; sourceTree = "<group>"; };
+		5064A0D42249FB630012FD36 /* CTMediator+YMModuleA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+YMModuleA.m"; sourceTree = "<group>"; };
 		50CE9B85223B8FE500C168DC /* YMReactiveCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMReactiveCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CE9B88223B8FE500C168DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50CE9B89223B8FE500C168DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5064A0D22249FB1B0012FD36 /* YMMediator */ = {
+			isa = PBXGroup;
+			children = (
+				5064A0D32249FB630012FD36 /* CTMediator+YMModuleA.h */,
+				5064A0D42249FB630012FD36 /* CTMediator+YMModuleA.m */,
+			);
+			path = YMMediator;
+			sourceTree = "<group>";
+		};
 		50CE9B7C223B8FE500C168DC = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +126,15 @@
 		50CE9B87223B8FE500C168DC /* YMReactiveCocoaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5064A0D22249FB1B0012FD36 /* YMMediator */,
 				50CE9B88223B8FE500C168DC /* AppDelegate.h */,
 				50CE9B89223B8FE500C168DC /* AppDelegate.m */,
 				50CE9B8B223B8FE500C168DC /* ViewController.h */,
 				50CE9B8C223B8FE500C168DC /* ViewController.m */,
 				504111DF223F374600DF3788 /* YMTestView.h */,
 				504111E0223F374600DF3788 /* YMTestView.m */,
+				5064A0CF2248763B0012FD36 /* YMObject.h */,
+				5064A0D02248763B0012FD36 /* YMObject.m */,
 				50CE9B8E223B8FE600C168DC /* Main.storyboard */,
 				50CE9B91223B8FE700C168DC /* Assets.xcassets */,
 				50CE9B93223B8FE700C168DC /* LaunchScreen.storyboard */,
@@ -296,10 +314,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YMReactiveCocoaDemo/Pods-YMReactiveCocoaDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,10 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5064A0D12248763B0012FD36 /* YMObject.m in Sources */,
 				504111E1223F374600DF3788 /* YMTestView.m in Sources */,
 				50CE9B8D223B8FE500C168DC /* ViewController.m in Sources */,
 				50CE9B98223B8FE700C168DC /* main.m in Sources */,
 				50CE9B8A223B8FE500C168DC /* AppDelegate.m in Sources */,
+				5064A0D52249FB630012FD36 /* CTMediator+YMModuleA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

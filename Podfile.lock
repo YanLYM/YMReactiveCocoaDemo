@@ -1,16 +1,20 @@
 PODS:
+  - CTMediator (25)
   - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
+  - CTMediator
   - ReactiveObjC (~> 3.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CTMediator
     - ReactiveObjC
 
 SPEC CHECKSUMS:
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: a391da2921de8c2e74b244eb6ee0a8dec50a6732
+PODFILE CHECKSUM: 676473b9439b6808ed0fb40a6840bde8fdf32ab8
 
 COCOAPODS: 1.5.3
